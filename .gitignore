@@ -30,12 +30,14 @@ node_modules
 .DS_Store
 
 # Compiled templates
-lib/dotjs/*.js
+# Removed, because there's no postinstall step for tarball-installed scripts.
+##lib/dotjs/*.js
 
 # Browserified tests
 .browser
 
 # bundles
-dist/
+# Removed, because there's no postinstall step for tarball-installed scripts.
+##dist/
 
 package-lock.json
