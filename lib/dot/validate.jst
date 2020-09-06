@@ -252,6 +252,11 @@
   return validate;
 {{??}}
   var {{=$valid}} = errors === errs_{{=$lvl}};
+  {{? it.schemaPath.startsWith('.oneOf[') }}
+    if (typeof ({{=$data}}.kind) === 'string') {
+      {{=$valid}} = {{=$data}}.kind === '{{=it.schema.$ref.substring(21)}}';
+    }
+  {{?}}
 {{?}}
 
 {{
